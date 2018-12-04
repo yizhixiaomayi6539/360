@@ -1,0 +1,195 @@
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.page {
+	overflow: hidden;
+}
+
+/*第一屏*/
+.first {
+	
+}
+
+.first .logo {
+	width: 251px;
+	height: 186px;
+	margin: 80px auto 100px;
+	background-image: url(../images/logo.png);
+}
+
+.first .text {
+	text-align: center;
+}
+
+.first .text img {
+	margin: 0 30px;
+}
+
+.first .info {
+	width: 772px;
+	height: 49px;
+	margin: 60px auto 0;
+	background-image: url(../images/info_1.png);
+}
+
+/*第一屏动画*/
+.first.current .text img {
+	margin: 0 5px;
+	transition: all 1.5s;
+}
+
+/*第二屏*/
+.second {
+	
+}
+
+.second > div {
+	padding: 0 120px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.second .shield {
+	width: 515px;
+}
+
+.second .shield img:nth-child(2) {
+	transform: translate(180px, 50px) rotate(40deg);
+}
+
+.second .info {
+	width: 635px;
+	height: 309px;
+	background-image: url(../images/info_2.png);
+}
+
+/*动画*/
+.second.current .shield img {
+	transform: translate(0, 0) rotate(0deg);
+	transition: all 1s;
+}
+
+/*第三屏*/
+.third > div {
+	padding: 0 100px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+}
+
+.third .info {
+	width: 631px;
+	height: 278px;
+	background-image: url(../images/info_3.png);
+}
+
+.third .circle {
+	width: 453px;
+	height: 449px;
+	background-image: url(../images/circle.png);
+}
+
+.third .rocket {
+	position: absolute;
+	bottom: -204px;
+	left: 500px;
+	width: 203px;
+	height: 204px;
+	background-image: url(../images/rocket.png);
+}
+
+/*第三屏动画*/
+.third.current .rocket {
+	transform: translate(420px, -430px);
+	transition: all 1s;
+}
+
+/*第四屏*/
+.forth {
+
+}
+
+.forth > div {
+	display: flex;
+	padding: 0 80px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.forth .search {
+	width: 530px;
+	height: 300px;
+	position: relative;
+
+	transform: translate(-120%);
+}
+
+.forth .search-box {
+	width: 100%;
+	height: 66px;
+	background-image: url(../images/search.png);
+}
+
+.forth .keys {
+	/*width: 99px;*/
+	width: 0;
+	height: 22px;
+	background-image: url(../images/key.png);
+
+	position: absolute;
+	left: 25px;
+	top: 24px;
+}
+
+.forth .result {
+	width: 529px;
+	height: 372px;
+	position: relative;
+	top: -12px;
+	overflow: hidden;
+}
+
+.forth .img-box {
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/result.png);
+
+	transform: translate(0, -100%);
+}
+
+.forth .info {
+	width: 612px;
+	height: 299px;
+	background-image: url(../images/info_4.png);
+}
+
+/*第四屏动画*/
+.forth.current .search {
+	transform: translate(0);
+	transition: all 1s;	
+}
+
+.forth.current .keys {
+	animation: typing 1s 1s steps(5) forwards;
+}
+
+.forth.current .img-box {
+	transform: translate(0, 0);
+	transition: all 1s 2.25s;
+}
+
+/*动画显示文字*/
+@keyframes typing {
+	from {
+		width: 0;
+	}
+
+	to {
+		width: 99px;
+	}
+}
